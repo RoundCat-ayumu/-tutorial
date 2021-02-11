@@ -50,7 +50,8 @@ gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
 # 方法1
 dst = threshold(gray, ksize=11, c=13)
+# 方法2       
+# dst = cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY,11,2)
 
 # 結果を出力
 cv2.imwrite("Photos/output.jpg", dst)
-
